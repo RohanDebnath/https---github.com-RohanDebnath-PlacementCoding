@@ -1,4 +1,5 @@
-public class first {
+
+public class Pallendrome {
     public static void main(String[] args) {
         String str = "Rohan";
         char charArray[] = str.toCharArray();
@@ -10,6 +11,6 @@ public class first {
         }
         String st = new String(charArray);
         System.out.println(st.equalsIgnoreCase(str));
-
     }
+
 }
