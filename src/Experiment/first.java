@@ -1,41 +1,38 @@
-/*
- 1 2 3 4 5 6 7 
- 2 3 4 5 6 7
-  3 4 5 6 7
-   4 5 6 7
-    5 6 7
-     6 7
-      7
-     6 7
-    5 6 7
-   4 5 6 7
-  3 4 5 6 7
- 2 3 4 5 6 7 
-1 2 3 4 5 6 7
-*/
 public class first {
 
     public static void main(String[] args) {
-        int n = 7;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j < i; j++) {
-                System.out.print(" ");
+        int[] array = { 1, 2, 3, 2, 4, 1, 4, 5, 6, 5, 5, 1, 5 };
+        int[] topTwoFrequentNumbers = findTopTwoFrequentNumbers(array);
+
+        System.out.println(
+                "Top two most frequent numbers: " + topTwoFrequentNumbers[0] + ", " + topTwoFrequentNumbers[1]);
+    }
+
+    public static int[] findTopTwoFrequentNumbers(int[] array) {
+        int n = array.length;
+        int firstNumber = 0, secondNumber = 0;
+        int firstCount = 0, secondCount = 0;
+
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+
+            for (int j = 0; j < n; j++) {
+                if (array[j] == array[i])
+                    count++;
             }
-            for (int j = i; j <= n; j++) {
-                System.out.print(j);
-                System.out.print(" ");
+
+            if (count > firstCount) {
+                secondCount = firstCount;
+                secondNumber = firstNumber;
+                firstCount = count;
+                firstNumber = array[i];
+            } else if (count > secondCount && count < firstCount) {
+                secondCount = count;
+                secondNumber = array[i];
             }
-            System.out.println();
         }
-        for (int i = n - 1; i >= 1; i--) {
-            for (int j = 1; j < i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = i; j <= n; j++) {
-                System.out.print(j);
-                System.out.print(" ");
-            }
-            System.out.println();
-        }
+
+        int[] topTwoFrequentNumbers = { firstNumber, secondNumber };
+        return topTwoFrequentNumbers;
     }
 }
