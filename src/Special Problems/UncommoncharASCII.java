@@ -28,6 +28,18 @@ public class UncommoncharASCII {
                 sum += (int) array2[i];
             }
         }
+        int d, z = 0;
+        while (sum != 0) {
+            d = sum % 10;
+            z += d;
+            sum /= 10;
+        }
+        while (z != 0) {
+            d = z % 10;
+            sum += d;
+            z /= 10;
+        }
+
         return sum;
     }
 
