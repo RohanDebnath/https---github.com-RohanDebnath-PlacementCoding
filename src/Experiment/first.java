@@ -1,15 +1,21 @@
 public class first {
-    public static void main(String[] args) {
-        String str = "Rohan";
-        char charArray[] = str.toCharArray();
-        int n = charArray.length;
-        for (int i = 0; i < n / 2; i++) {
-            charArray[i] = (char) (charArray[i] ^ charArray[n - i - 1]);
-            charArray[n - i - 1] = (char) (charArray[i] ^ charArray[n - i - 1]);
-            charArray[i] = (char) (charArray[i] ^ charArray[n - i - 1]);
+    public static String removeDuplicates(String str) {
+        StringBuilder sb = new StringBuilder();
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+            if (result.indexOf(currentChar) == -1) {
+                sb.append(currentChar);
+                result = sb.toString();
+            }
         }
-        String st = new String(charArray);
-        System.out.println(st.equalsIgnoreCase(str));
+        return result;
+    }
 
+    public static void main(String[] args) {
+        String str = "Hello World!";
+        String result = removeDuplicates(str);
+        System.out.println("Original String: " + str);
+        System.out.println("String without duplicates: " + result);
     }
 }
