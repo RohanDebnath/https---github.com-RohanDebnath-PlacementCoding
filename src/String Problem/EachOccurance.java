@@ -29,7 +29,5 @@ public class EachOccurance {
         String str = "RoRRhanDebnath";
         EachOccurance obj = new EachOccurance();
         obj.solution(str);
-
     }
-
 }
