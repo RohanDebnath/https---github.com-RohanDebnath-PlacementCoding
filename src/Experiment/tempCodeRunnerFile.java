@@ -5,5 +5,9 @@ class tempCodeRunnerFile {
         // String chh = "nnnnnn";
         // System.out.println(chh.indexOf(ch));
 
+        int isf = Integer.MAX_VALUE;
+        if (isf < 2)
+            isf = 2;
+        System.out.println(isf);
     }
 }
