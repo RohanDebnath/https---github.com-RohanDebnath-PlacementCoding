@@ -10,6 +10,8 @@ public class Break {
             System.out.println(2);
             case 3:
             System.out.println(3);
+            default :
+            System.out.println("Hi");
         }
         return 0;
     }
