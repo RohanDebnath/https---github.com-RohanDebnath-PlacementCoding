@@ -1,3 +1,15 @@
+/*
+ Problem Statement –
+You have write a function that accepts, a string which length is “len”, the string has some “#”, in it you have to move all 
+the hashes to the front of the string and return the whole string back and print it.
+char* moveHash(char str[],int n);
+example :-
+Sample Test Case
+Input:
+Move#Hash#to#Front
+Output:
+###MoveHashtoFront
+*/
 public class HashtoFront {
     String result(String str) {
         StringBuilder sb = new StringBuilder();
