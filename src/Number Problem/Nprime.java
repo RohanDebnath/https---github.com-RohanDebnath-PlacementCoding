@@ -5,7 +5,7 @@ public class Nprime {
         StringBuilder sb = new StringBuilder();
         for (int i = 2; i <= n; i++) {
             int count = 0;
-            for (int j = 2; j <= Math.sqrt(i); j++) {
+            for (int j = 2; j <= i/2; j++) {
                 if (i % j == 0)
                     count++;
             }

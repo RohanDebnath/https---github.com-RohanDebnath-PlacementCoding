@@ -31,18 +31,18 @@ public class BinaryEvaluationProb {
         else
         {
             int val= Character.getNumericValue(str.charAt(0));
-            for(int i=0;i<str.length();i+=2)
+            for(int i=1;i<str.length();i+=2)
             {
                 if(str.charAt(i)=='A')
                 {
-                    val &= Character.getNumericValue(str.charAt(i));
+                    val &= Character.getNumericValue(str.charAt(i+1));
                 }
                 else if(str.charAt(i)=='B')
                 {
-                    val |= Character.getNumericValue(str.charAt(i));
+                    val |= Character.getNumericValue(str.charAt(i+1));
                 }else if(str.charAt(i)=='C')
                 {
-                    val ^= Character.getNumericValue(str.charAt(i));
+                    val ^= Character.getNumericValue(str.charAt(i+1));
                 }
             }
          return val;

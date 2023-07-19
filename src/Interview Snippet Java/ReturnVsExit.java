@@ -19,5 +19,4 @@ public class ReturnVsExit {
         ReturnVsExit obj = new ReturnVsExit();
         System.out.println(obj.result(str));
     }
-
 }
