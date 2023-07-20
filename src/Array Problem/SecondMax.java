@@ -4,7 +4,7 @@ public class SecondMax {
 
     int result(int []arr)
     {
-        int max=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
         int secondMax=Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++)
         {
