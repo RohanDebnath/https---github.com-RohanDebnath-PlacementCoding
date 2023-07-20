@@ -13,13 +13,13 @@ public class Month {
             case 3:
             case 4:
             case 5:
-           // return "Spring";
-            break;
+            return "Spring";
+          //  break;
             case 6:
             case 7:
             case 8:
-           // return "Rainy";
-            break;
+            return "Rainy";
+         //   break;
             case 9:
             case 10:
             case 11:
