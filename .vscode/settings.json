@@ -7,5 +7,6 @@
     "files.associations": {
         "*.embeddedhtml": "html",
         "22.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
