@@ -152,6 +152,31 @@ public class SLL {
         }
         System.out.println("The " + key + " element from the end is " + mainPtr.data);
     }
+    void removeDuplicatefromSortedList()
+    {
+        ListNode current = head;
+        while(current!=null && current.next!=null)
+        {
+            if(current.data==current.next.data)
+            current.next=current.next.next;
+            else
+            current=current.next;
+        }
+    }
+    void insertinSortedvalue(int val)
+    {
+        ListNode current=head;
+        ListNode temp=null;
+        ListNode newNode = new ListNode(val);
+        while(current!=null && current.data<newNode.data)
+        {
+            temp=current;
+            current=current.next;
+        }
+        newNode.next=current;
+        temp.next=newNode;
+        
+    }
 
     public static void main(String[] args) {
         SLL sll = new SLL();
@@ -175,12 +200,17 @@ public class SLL {
         System.out.println();
 
         sll.insertAtLast(50);
+        sll.insertAtLast(50);
         sll.insertAtLast(60);
         sll.display();
 
         System.out.println();
         sll.insertAtposition(15, 3);
         sll.insertAtposition(16, 4);
+        sll.display();
+        System.out.println();
+
+        sll.insertinSortedvalue(17);
         sll.display();
 
         System.out.println();
@@ -205,6 +235,10 @@ public class SLL {
         sll.getMiddleNode();
 
         sll.findKthNode_fromtheENd(3);
+
+        sll.removeDuplicatefromSortedList();
+        sll.display();
+
 
     }
 }
