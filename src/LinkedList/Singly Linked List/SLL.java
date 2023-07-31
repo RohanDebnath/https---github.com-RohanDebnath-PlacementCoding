@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class SLL {
 
     private ListNode head;
@@ -152,30 +154,39 @@ public class SLL {
         }
         System.out.println("The " + key + " element from the end is " + mainPtr.data);
     }
-    void removeDuplicatefromSortedList()
-    {
+
+    void removeDuplicatefromSortedList() {
         ListNode current = head;
-        while(current!=null && current.next!=null)
-        {
-            if(current.data==current.next.data)
-            current.next=current.next.next;
+        while (current != null && current.next != null) {
+            if (current.data == current.next.data)
+                current.next = current.next.next;
             else
-            current=current.next;
+                current = current.next;
         }
     }
-    void insertinSortedvalue(int val)
-    {
-        ListNode current=head;
-        ListNode temp=null;
+
+    void insertinSortedvalue(int val) {
+        ListNode current = head;
+        ListNode temp = null;
         ListNode newNode = new ListNode(val);
-        while(current!=null && current.data<newNode.data)
-        {
-            temp=current;
-            current=current.next;
+        while (current != null && current.data < newNode.data) {
+            temp = current;
+            current = current.next;
         }
-        newNode.next=current;
-        temp.next=newNode;
-        
+        newNode.next = current;
+        temp.next = newNode;
+
+    }
+
+    void deleteaNodeUsingValue(int val) {
+        ListNode current = head;
+        ListNode temp = null;
+        while (current != null && current.data != val) {
+            temp = current;
+            current = current.next;
+        }
+        if (current != null)
+            temp.next = current.next;
     }
 
     public static void main(String[] args) {
@@ -216,6 +227,10 @@ public class SLL {
         System.out.println();
         sll.deleteatFirst();
         sll.display();
+        System.out.println();
+
+        sll.deleteaNodeUsingValue(17);
+        sll.display();
 
         System.out.println();
         sll.deleteatlast();
@@ -238,7 +253,6 @@ public class SLL {
 
         sll.removeDuplicatefromSortedList();
         sll.display();
-
 
     }
 }
