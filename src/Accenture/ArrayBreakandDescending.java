@@ -1,3 +1,8 @@
+/*
+4
+34 79 58 64
+98765443
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
