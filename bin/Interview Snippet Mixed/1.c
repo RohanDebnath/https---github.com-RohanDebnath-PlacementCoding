@@ -2,9 +2,9 @@
 int main()
 {
     int i=0;
-    while(i++)
+    while(i++) 
     {
-        printf("Loop");
+        printf("Loop"); 
         if(i==3)
         break;
     }

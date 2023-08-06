@@ -5,11 +5,13 @@ public class Break {
         switch(n)
         {
             case 1:
-            System.out.println(1);
+            System.out.println("Hello");
             case 2:
-            System.out.println(2);
+            System.out.println("Soumik");
+           // return 1;
+            System.exit(0);
             case 3:
-            System.out.println(3);
+            System.out.println("Rohan");
             default :
             System.out.println("Hi");
         }
@@ -44,7 +46,7 @@ public class OperationChoice {
 
     public static void main(String[] args) {
         OperationChoice obj= new OperationChoice();
-        System.out.println(obj.result(12, 16, 1));
+        System.out.println(obj.result(2, 6, 1));
     }
 }
 
