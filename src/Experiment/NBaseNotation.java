@@ -23,8 +23,8 @@ public class NBaseNotation {
         }
     }
     public static void main(String[] args) {
-        int n = 12;
-        int num = 718;
+        int n = 21;
+        int num = 5678 ;
         String result = DecToNBase(n, num);
         System.out.println(result);
     }
