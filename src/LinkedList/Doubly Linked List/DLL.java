@@ -91,6 +91,21 @@ public class DLL {
         return temp;
     }
 
+    public ListNode deleteatLast() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        ListNode temp = tail;
+        if (head == tail) {
+            head = null;
+        } else {
+            tail.prev.next = null;
+        }
+        tail = tail.prev;
+        temp.prev = null;
+        return temp;
+    }
+
     public static void main(String[] args) {
         DLL dll = new DLL();
         dll.insertAtLast(10);
@@ -109,7 +124,15 @@ public class DLL {
         dll.displayBackward();
 
         System.out.println();
+        System.out.println("Deleting at First");
         dll.deleteatFirst();
+        dll.displayForward();
+        System.out.println();
+        dll.displayBackward();
+
+        System.out.println();
+        System.out.println("Deleting at last");
+        dll.deleteatLast();
         dll.displayForward();
         System.out.println();
         dll.displayBackward();
