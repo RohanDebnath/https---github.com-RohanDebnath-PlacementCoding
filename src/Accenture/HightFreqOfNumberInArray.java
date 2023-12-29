@@ -31,7 +31,7 @@ public class HightFreqOfNumberInArray {
             }
             else if(newArray[i]==MaxValue)
             {
-                MaxValue=Math.min(MaxValue, i);
+                MaxValue=Math.max(MaxValue, i);
             }
         }
         return MaxValue;

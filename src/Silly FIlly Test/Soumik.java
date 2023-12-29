@@ -1,8 +1,10 @@
- class Soumik {
+import java.util.*;
+class Soumik {
     public static void main(String[] args) {
-     char k='9';
-     int c=k-'0';
-     System.out.println(c*2);
-     
+        StringBuilder sb= new StringBuilder();
+        sb.append("Rohan");
+        sb.reverse();
+        String str=sb.toString();
+        System.out.println(str);
     }
 }

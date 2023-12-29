@@ -1,27 +1,32 @@
+import java.util.Scanner;
 
-public class Bamby {
+class Compute {
+    
+        public void rotate(int arr[], int n)
+        {
+          int sol[]= new int[arr.length];
+        sol[0]=arr[arr.length-1];
+        for(int i=1;i<arr.length;i++)
+        {
+            sol[i]=arr[i-1];
+        }
+        for(int i:sol)
+        {
+            System.out.print(i+" ");
+        }
+        }
+    }
+    public class Bamby {
     public static void main(String[] args) {
-        String str="Ayantika";
-        String str2="Ayantika";
-        String s1= new String("Rohan");
-        String s2= new String("Rohan");
-
-        System.out.println(str==str2);                 
-        System.out.println(s2==s1);                   
-        System.out.println(str.equals(str2));        
-        System.out.println(s1.equals(s2));        
-
-        StringBuffer sb = new StringBuffer("A");
-        StringBuffer sb2 = new StringBuffer("A");
-
-        System.out.println(sb==sb2); 
-        System.out.println(sb.equals(sb2));
-
-        StringBuilder sb3 = new StringBuilder("B");
-        StringBuilder sb4 = new StringBuilder("B");
-        System.out.println(sb3==sb4);
-        System.out.println(sb3.equals(sb4));
-
+       Scanner sc = new Scanner(System.in);
+       int n=sc.nextInt();
+       int arr[]= new int[n];
+       for (int i = 0; i < arr.length; i++) {
+            arr[i]=sc.nextInt();
+       } 
+    Compute obj = new Compute();
+    obj.rotate(arr, n);
+   
     }
     
 }
