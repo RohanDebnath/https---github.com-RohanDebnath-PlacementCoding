@@ -117,6 +117,7 @@ public class SLL {
     void reservseList() {
         if (head == null)
             System.out.println("Cannot Reverse");
+            
         ListNode currentNode = head;
         ListNode previousNode = null;
         ListNode nextNode = null;

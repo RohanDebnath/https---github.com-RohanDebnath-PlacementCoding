@@ -1,10 +1,12 @@
-import java.util.*;
 class Soumik {
+    static void print(int n) {
+        if (n < 1)
+            return;
+        print(n - 1);
+        System.out.print(n);
+    }
     public static void main(String[] args) {
-        StringBuilder sb= new StringBuilder();
-        sb.append("Rohan");
-        sb.reverse();
-        String str=sb.toString();
-        System.out.println(str);
+        print(3);
+        print(3);
     }
 }
